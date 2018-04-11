@@ -18,12 +18,41 @@ const skillData = [
     {
         country: "UNITED KINGDOM",
         costs: "$163 is the average daily price for traveling in the United Kingdom. The average price of food for one day is $39. The average price of a hotel for a couple is $163"
+    },
+    {
+        country: "AUSTRALIA",
+        costs: "$186 is the average daily price for traveling in Australia. The average price of food for one day is $33"
+    },
+    {
+        country: "NEW ZEALAND",
+        costs: "$130 is the average daily price for traveling in New Zealand. The average price of food for one day is $25. The average price of a hotel for a couple is $150"
+    },
+    {
+        country: "MEXICO",
+        costs: "$50 is the average daily price for traveling in Mexico. The average price of food for one day is $11"
+    },
+    {
+        country: "INDIA",
+        costs: "$32 is the average daily price for traveling in India. The average price of food for one day is $7.29"
+    },
+    {
+        country: "UNITED STATES OF AMERICA",
+        costs: "$224 is the average daily price for traveling in the United States of America. The average price of food for one day is $41"
+
+    },
+    {
+        country: "THAILAND",
+        costs: "$70 is the average daily price for traveling in Thailand. The average price of food for one day is $15"
+    },
+    {
+        country: "CHINA",
+        costs: "$74 is the average daily price for traveling in China. The average price of food for one day is $20"
     }
 ];
 
 var handlers = {
   'LaunchRequest': function () {
-    this.emit(':ask', 'Hello , Welcome to the travel costs guide. Tell me what country you are going to and I will tell you how much you need to spend on food and accommodation. ', 'Tell me the country and I will tell you much you need to spend on food and accomodation');
+    this.emit(':ask', 'Welcome to the travel costs guide. Tell me what country you are going to and I will tell you how much you need on average to spend on food and accommodation. ', 'Tell me the country and I will tell you much you need on average to spend on food and accomodation');
   },
   'TravelCosts': function() {
       var countrySlot = this.event.request.intent.slots.country.value;
