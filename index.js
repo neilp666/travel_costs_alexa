@@ -5,15 +5,19 @@ const APP_ID = 'amzn1.ask.skill.7853b88c-4a25-4c81-9d1d-b98b385c4221';
 const skillData = [
     {
         country: "FRANCE",
-        suggestion: "$175 is the average daily price for traveling in France. The average price of food for one day is $36. The average price of a hotel for a couple is $206"
+        costs: "$175 is the average daily price for traveling in France. The average price of food for one day is $36. The average price of a hotel for a couple is $206"
     },
     {
         country: "SPAIN",
-        suggestion: ""
+        costs: "$135 is the average daily price for traveling in Spain. The average price of food for one day is $32. The average price of a hotel for a couple is $118"
     },
     {
-        country: "RUSSIA",
-        suggestion: ""
+        country: "ITALY",
+        costs: "$149 is the average daily price for traveling in Italy. The average price of food for one day is $39. The average price of a hotel for a couple is $157"
+    },
+    {
+        country: "UNITED KINGDOM",
+        costs: "$163 is the average daily price for traveling in the United Kingdom. The average price of food for one day is $39. The average price of a hotel for a couple is $163"
     }
 ];
 
@@ -23,7 +27,7 @@ var handlers = {
   },
   'TravelCosts': function() {
       var countrySlot = this.event.request.intent.slots.country.value;
-      this.emit(':tell', getSuggestion(skillData, 'country', countrySlot.toUpperCase()).suggestion);
+      this.emit(':tell', getSuggestion(skillData, 'country', countrySlot.toUpperCase()).costs);
   },
   'Unhandled': function () {
     this.emit(':tell', 'Sorry, I don\'t know what to do');
