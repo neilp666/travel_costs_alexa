@@ -21,33 +21,70 @@ const skillData = [
     },
     {
         country: "AUSTRALIA",
-        costs: "$186 is the average daily price for traveling in Australia. The average price of food for one day is $33"
+        costs: "$186 is the average daily price for traveling in Australia. The average price of food for one day is $33. The average price of a hotel for a couple is $203"
     },
     {
         country: "NEW ZEALAND",
-        costs: "$130 is the average daily price for traveling in New Zealand. The average price of food for one day is $25. The average price of a hotel for a couple is $150"
+        costs: "$130 is the average daily price for traveling in New Zealand. The average price of food for one day is $25. The average price of a hotel for a couple is $150. The average price of a hotel for a couple is $150"
     },
     {
         country: "MEXICO",
-        costs: "$50 is the average daily price for traveling in Mexico. The average price of food for one day is $11"
+        costs: "$50 is the average daily price for traveling in Mexico. The average price of food for one day is $11. The average price of a hotel for a couple is $51"
     },
     {
         country: "INDIA",
-        costs: "$32 is the average daily price for traveling in India. The average price of food for one day is $7.29"
+        costs: "$32 is the average daily price for traveling in India. The average price of food for one day is $7.29. The average price of a hotel for a couple is $36"
     },
     {
         country: "UNITED STATES OF AMERICA",
-        costs: "$224 is the average daily price for traveling in the United States of America. The average price of food for one day is $41"
+        costs: "$224 is the average daily price for traveling in the United States of America. The average price of food for one day is $41. The average price of a hotel for a couple is $214"
 
     },
     {
         country: "THAILAND",
-        costs: "$70 is the average daily price for traveling in Thailand. The average price of food for one day is $15"
+        costs: "$70 is the average daily price for traveling in Thailand. The average price of food for one day is $15. The average price of a hotel for a couple is $67"
     },
     {
         country: "CHINA",
-        costs: "$74 is the average daily price for traveling in China. The average price of food for one day is $20"
+        costs: "$74 is the average daily price for traveling in China. The average price of food for one day is $20.  The average price of a hotel for a couple is $67"
+    },
+    {
+        country: "RUSSIA",
+        costs: "$60 is the average daily price for traveling in Russia. The average price of food for one day is $15. The average price of a hotel for a couple is $68"
+    },
+    {
+        country: "SWITZERLAND"
+        costs: "$188 is the average daily price for traveling in Switzerland. The average price of food for one day is $42. The average price of a hotel for a couple is $231"
+    },
+    {
+        country: "TURKEY",
+        costs: "$38 is the average daily price for traveling in Turkey. The average price of food for one day is $7.69. The average price of a hotel for a couple is $49"
+    },
+    {
+        country: "UKRAINE",
+        costs: "$29 is the average daily price for traveling in the Ukraine. The average price of food for one day is $6.92. The average price of a hotel for a couple is $38"
+    },
+    {
+       country: "PORTUGAL",
+       costs: "$117 is the average daily price for traveling in Portugal. The average price of food for one day is $35. The average price of a hotel for a couple is $103"
+    },
+    {
+       country: "NETHERLANDS",
+       costs: "$144 is the average daily price for traveling in the Netherlands. The average price of food for one day is $33. The average price of a hotel for a couple is $163"
+    },
+    {
+       country: "IRELAND",
+       costs: "$125 is the average daily price for traveling in Ireland. The average price of food for one day is $36. The average price of a hotel for a couple is $122"
+    },
+    {
+       country: "HUNGARY",
+       costs: "$84 is the average daily price for traveling in Hungary. The average price of food for one day is $19. The average price of a hotel for a couple is $95"
+    },
+    {
+       country: "CANADA",
+       costs: "$127 is the average daily price for traveling in Canada. The average price of food for one day is $27. The average price of a hotel for a couple is $130"
     }
+
 ];
 
 var handlers = {
@@ -62,7 +99,7 @@ var handlers = {
     this.emit(':tell', 'Sorry, I don\'t know what to do');
   },
   'AMAZON.HelpIntent': function () {
-      this.emit(':ask', "What can I help you with?", "How can I help?");
+      this.emit(':ask', "Welcome to the travel costs guide. Tell me what country you are going to and I will tell you how much you need on average to spend on food and accommodation", 'Tell me the country and I will tell you much you need on average to spend on food and accomodation');
   },
   'AMAZON.CancelIntent': function () {
       this.emit(':tell', "Okay!");
@@ -85,29 +122,3 @@ function getSuggestion(data, propName, propValue) {
     }
   }
 }
-
-{
-  "intents": [
-    {
-      "intent": "AMAZON.CancelIntent"
-    },
-    {
-      "intent": "AMAZON.HelpIntent"
-    },
-    {
-      "slots": [
-        {
-          "name": "state",
-          "type": "AMAZON.US_STATE"
-        }
-      ],
-      "intent": "MakeSuggestion"
-    }
-  ]
-}
-
-Sample Utterences
-
-MakeSuggestion suggest a beer from {state}
-MakeSuggestion from {state}
-MakeSuggestion {state}
