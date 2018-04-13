@@ -53,7 +53,7 @@ const skillData = [
         costs: "$60 is the average daily price for traveling in Russia. The average price of food for one day is $15. The average price of a hotel for a couple is $68"
     },
     {
-        country: "SWITZERLAND"
+        country: "SWITZERLAND",
         costs: "$188 is the average daily price for traveling in Switzerland. The average price of food for one day is $42. The average price of a hotel for a couple is $231"
     },
     {
@@ -83,6 +83,34 @@ const skillData = [
     {
        country: "CANADA",
        costs: "$127 is the average daily price for traveling in Canada. The average price of food for one day is $27. The average price of a hotel for a couple is $130"
+    },
+    {
+       country: "BRAZIL",
+       costs: "$68 is the average daily price for traveling in Brazil. The average price of food for one day is $16. The average price of a hotel for a couple is $73"
+    },
+    {
+      country: "ARGENTINA",
+      costs: "$109 is the average daily price for traveling in Argentina. The average price of food for one day is $17. The average price of a hotel for a couple is $74"
+    },
+    {
+      country: "COLUMBIA",
+      costs: "$32 is the average daily price for traveling in Colombia. The average price of food for one day is $8.53. The average price of a hotel for a couple is $26"
+    },
+    {
+      country: "CHILE",
+      costs: "$111 is the average daily price for traveling in Chile. The average price of food for one day is $19. The average price of a hotel for a couple is $147"
+    },
+    {
+      country: "URUGUAY",
+      costs: "$93 is the average daily price for traveling in Uruguay. The average price of food for one day is $28. The average price of a hotel for a couple is $87"
+    },
+    {
+      country: "PERU",
+      costs: "$44 is the average daily price for traveling in Peru. The average price of food for one day is $12. The average price of a hotel for a couple is $42"
+    },
+    {
+      country: "PARAGUAY",
+      costs: "$52 is the average daily price for traveling in Paraguay. The average price of food for one day is $6.33. The average price of a hotel for a couple is $28"
     }
 
 ];
