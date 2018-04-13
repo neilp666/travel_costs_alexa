@@ -135,6 +135,26 @@ const skillData = [
     {
       country: "MADAGASCAR",
       costs: "$97 is the average daily price for traveling in Madagascar. The average price of food for one day is $32. The average price of a hotel for a couple is $100"
+    },
+    {
+      country: "BAHAMAS",
+      costs: "$124 is the average daily price for traveling in the Bahamas. The average price of food for one day is $38. The average price of a hotel for a couple is $127"
+    },
+    {
+      country: "BARBADOS",
+      costs: "$303 is the average daily price for traveling in Barbados. The average price of food for one day is $77. The average price of a hotel for a couple is $379"
+    },
+    {
+      country: "CUBA",
+      costs: "$17 is the average daily price for traveling in Cuba. The average price of food for one day is $9.06. The average price of a hotel for a couple is $11"
+    },
+    {
+      country: "JAMAICA",
+      costs: "$124 is the average daily price for traveling in Jamaica. The average price of food for one day is $25. The average price of a hotel for a couple is $172"
+    },
+    {
+      country: "BERMUDA",
+      costs: "$164 is the average daily price for traveling in Bermuda. The average price of food for one day is BM$78 $78. The average price of a hotel for a couple is $84"
     }
 ];
 
