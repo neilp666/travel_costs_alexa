@@ -111,8 +111,31 @@ const skillData = [
     {
       country: "PARAGUAY",
       costs: "$52 is the average daily price for traveling in Paraguay. The average price of food for one day is $6.33. The average price of a hotel for a couple is $28"
+    },
+    {
+      country: "MOROCCO",
+      costs: "$42 is the average daily price for traveling in Morocco. The average price of food for one day is $12. The average price of a hotel for a couple is $44"
+    },
+    {
+      country: "EGYPT",
+      costs: "$22 is the average daily price for traveling in Egypt. The average price of food for one day is $5.56. The average price of a hotel for a couple is $23"
+    },
+    {
+      country: "KENYA",
+      costs: "$106 s the average daily price for traveling in Kenya. The average price of food for one day is $30. The average price of a hotel for a couple is $64"
+    },
+    {
+      country: "SEYCHELLES",
+      costs: "$166 is the average daily price for traveling in the Seychelles. The average price of food for one day is $42. The average price of a hotel for a couple is $136"
+    },
+    {
+      country: "SOUTH AFRICA",
+      costs: "$103 is the average daily price for traveling in South Africa. The average price of food for one day is $26. The average price of a hotel for a couple is $100"
+    },
+    {
+      country: "MADAGASCAR",
+      costs: "$97 is the average daily price for traveling in Madagascar. The average price of food for one day is $32. The average price of a hotel for a couple is $100"
     }
-
 ];
 
 var handlers = {
