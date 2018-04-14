@@ -154,7 +154,63 @@ const skillData = [
     },
     {
       country: "BERMUDA",
-      costs: "$164 is the average daily price for traveling in Bermuda. The average price of food for one day is BM$78 $78. The average price of a hotel for a couple is $84"
+      costs: "$164 is the average daily price for traveling in Bermuda. The average price of food for one day is $78. The average price of a hotel for a couple is $84"
+    },
+    {
+      country: "CAMBODIA",
+      costs: "$34 is the average daily price for traveling in Cambodia. The average price of food for one day is $11. The average price of a hotel for a couple is $23"
+    },
+    {
+      country: "HONG KONG",
+      costs: "$143 is the average daily price for traveling in Hong Kong. The average price of food for one day is $26. The average price of a hotel for a couple is $124"
+    },
+    {
+      country: "INDONESIA",
+      costs: "$43 is the average daily price for traveling in Indonesia. The average price of food for one day is $13. The average price of a hotel for a couple is $45"
+    },
+    {
+      country: "JAPAN",
+      costs: "$121 is the average daily price for traveling in Japan. The average price of food for one day is $28. The average price of a hotel for a couple is $112"
+    },
+    {
+      country: "MALAYSIA",
+      costs: "$66 is the average daily price for traveling in Malaysia. The average price of food for one day is $17. The average price of a hotel for a couple is $63"
+    },
+    {
+      country: "MALDIVES",
+      costs: "$59 is the average daily price for traveling in the Maldives. The average price of food for one day is $13. The average price of a hotel for a couple is $83"
+    },
+    {
+      country: "NEPAL",
+      costs: "$28 is the average daily price for traveling in Nepal. The average price of food for one day is $8.43. The average price of a hotel for a couple is $27"
+    },
+    {
+      country: "PAKISTAN",
+      costs: "$107 is the average daily price for traveling in Pakistan. The average price of food for one day is $26. The average price of a hotel for a couple is $133"
+    },
+    {
+      country: "PHILIPPINES",
+      costs: "$40 is the average daily price for traveling in Philippines. The average price of food for one day is $9.88. The average price of a hotel for a couple is $28"
+    },
+    {
+      country: "SINGAPORE",
+      costs: "$113 is the average daily price for traveling in Singapore. The average price of food for one day is $23. The average price of a hotel for a couple is $136"
+    },
+    {
+      country: "SOUTH KOREA",
+      costs: "$104 is the average daily price for traveling in South Korea. The average price of food for one day is $23. The average price of a hotel for a couple is $106"
+    },
+    {
+      country: "SRI LANKA",
+      costs: "$33 is the average daily price for traveling in Sri Lanka. The average price of food for one day is $9.04. The average price of a hotel for a couple is $26"
+    },
+    {
+      country: "TAIWAN",
+      costs: "$76 is the average daily price for traveling in Taiwan. The average price of food for one day is $12. The average price of a hotel for a couple is $91"
+    },
+    {
+      country: "VIETNAM",
+      costs: "$41 is the average daily price for traveling in Vietnam. The average price of food for one day is $9.66. The average price of a hotel for a couple is $42"
     }
 ];
 
