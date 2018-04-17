@@ -216,23 +216,24 @@ const skillData = [
 
 var handlers = {
   'LaunchRequest': function () {
-    this.emit(':ask', 'Welcome to the travel costs guide. Tell me what country you are going to and I will tell you how much you need on average to spend on food and accommodation. ', 'Tell me the country and I will tell you much you need on average to spend on food and accomodation');
+    this.emit(':askWithCard', 'Welcome to Travel Helper. Tell me what country are you are going to. I will tell you how much you need on average to spend on food and accommodation. ', 'Tell me the name and I will tell you much you need on average to spend on food and accomodation', 'Travel Helper Guide', 'Tell me the name and I will tell you much you need on average to spend on food and accomodation');
   },
   'TravelCosts': function() {
-      var countrySlot = this.event.request.intent.slots.country.value;
-      this.emit(':tell', getSuggestion(skillData, 'country', countrySlot.toUpperCase()).costs);
+    var countrySlot = this.event.request.intent.slots.country.value;
+    this.emit(':tell', getSuggestion(skillData, 'country', countrySlot.toUpperCase()).costs);
   },
   'Unhandled': function () {
     this.emit(':tell', 'Sorry, I don\'t know what to do');
   },
   'AMAZON.HelpIntent': function () {
-      this.emit(':ask', "Welcome to the travel costs guide. Tell me what country you are going to and I will tell you how much you need on average to spend on food and accommodation", 'Tell me the country and I will tell you much you need on average to spend on food and accomodation');
+    this.emit(':askWithCard', 'Welcome to Travel Helper. Tell me what country are you are going to. I will tell you how much you need on average to spend on food and accommodation. ', 'Tell me the name and I will tell you much you need on average to spend on food and accomodation', 'Travel Helper Guide', 'Tell me the name and I will tell you much you need on average to spend on food and accomodation');
+
   },
   'AMAZON.CancelIntent': function () {
       this.emit(':tell', "Okay!");
   },
   'AMAZON.StopIntent': function () {
-      this.emit(':tell', "Goodbye!");
+      this.emit(':tell', "Goodbye! and thanks for using Travel Helper");
   },
 };
 
