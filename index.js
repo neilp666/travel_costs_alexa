@@ -216,7 +216,7 @@ const skillData = [
 
 var handlers = {
   'LaunchRequest': function () {
-    this.emit(':askWithCard', 'Welcome to Travel Helper. Tell me what country your going to. I will tell you how much you need on average to spend on food and accommodation. ', 'Tell me the name and I will tell you much you need on average to spend on food and accomodation', 'Travel Helper Guide', 'What country are you going to? I will tell you much you need on average to spend on food and accomodation');
+    this.emit(':askWithCard', 'Welcome to Travel Helper. Tell me what country your going to. I will tell you how much you need on average to spend on food and accommodation. ', 'Tell me what country your are going to and I will tell you much you need on average to spend on food and accomodation', 'Travel Helper Guide', 'What country are you going to? I will tell you much you need on average to spend on food and accomodation');
   },
   'TravelCosts': function() {
     var countrySlot = this.event.request.intent.slots.country.value;
@@ -226,7 +226,7 @@ var handlers = {
     this.emit(':tell', 'Sorry, I don\'t know what to do');
   },
   'AMAZON.HelpIntent': function () {
-    this.emit(':askWithCard', 'Welcome to Travel Helper. Tell me what country your are going to. I will tell you how much you need on average to spend on food and accommodation. ', 'Tell me the name and I will tell you much you need on average to spend on food and accomodation', 'Travel Helper Guide', 'What country are you going to? I will tell you much you need on average to spend on food and accomodation');
+    this.emit(':askWithCard', 'Welcome to Travel Helper. Tell me what country your are going to. I will tell you how much you need on average to spend on food and accommodation. ', 'Tell me what country your are going to and I will Tell me the name and I will tell you much you need on average to spend on food and accomodation', 'Travel Helper Guide', 'What country are you going to? I will tell you much you need on average to spend on food and accomodation');
 
   },
   'AMAZON.CancelIntent': function () {
