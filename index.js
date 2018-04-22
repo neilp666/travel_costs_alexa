@@ -12,6 +12,10 @@ const skillData = [
         costs: "$135 is the average daily price for traveling in Spain. The average price of food for one day is $32. The average price of a hotel for a couple is $118"
     },
     {
+        country: "GERMANY",
+        costs: "$130 is the average daily price for traveling in Germany. The average price of food for one day is $34. The average price of a hotel for a couple is $130"
+    },
+    {
         country: "ITALY",
         costs: "$149 is the average daily price for traveling in Italy. The average price of food for one day is $39. The average price of a hotel for a couple is $157"
     },
@@ -220,10 +224,18 @@ var handlers = {
   },
   'TravelCosts': function() {
     var countrySlot = this.event.request.intent.slots.country.value;
-    this.emit(':tell', getSuggestion(skillData, 'country', countrySlot.toUpperCase()).costs);
+    if(countrySlot !== undefined && skillData.findIndex(element => element.country === countrySlot.toUpperCase()) >= 0) {
+      console.log(`country ${countrySlot} exist`);
+      this.emit(':tellWithCard', getSuggestion(skillData, 'country', countrySlot.toUpperCase()).costs, 'country','costs');
+    }
+    else {
+      console.log(`can't find country: ${countrySlot} in skillData`);
+      this.emit(':tell', 'Sorry you have entered an invalid country name or I dont have information on that country');
+    }
   },
+
   'Unhandled': function () {
-    this.emit(':tell', 'Sorry, I don\'t know what to do');
+    this.emit(':tell', 'Sorry, I don\'t know have information on that particular country');
   },
   'AMAZON.HelpIntent': function () {
     this.emit(':askWithCard', 'Welcome to Travel Helper. Tell me what country your are going to. I will tell you how much you need on average to spend on food and accommodation. ', 'Tell me what country your are going to and I will Tell me the name and I will tell you much you need on average to spend on food and accomodation', 'Travel Helper Guide', 'What country are you going to? I will tell you much you need on average to spend on food and accomodation');
@@ -235,6 +247,12 @@ var handlers = {
   'AMAZON.StopIntent': function () {
       this.emit(':tell', "Goodbye! and thanks for using Travel Helper");
   },
+  'AMAZON.YesIntent': function() {
+
+  },
+  'AMAZON.NoIntent': function() {
+
+  }
 };
 
 exports.handler = function(event, context){
